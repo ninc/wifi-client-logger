@@ -72,13 +72,14 @@ def print_data(line):
 def main():
     
     target_mac = "2C:54:CF:FB:4C:C8"
+    #target_mac = "C4:0A:CB:5C:25:41"
 
     try:
         while(True):
             for line in fileinput.input():
                 l = line.upper()
                 if(find_mac_source(l, target_mac)):
-                    print(l)
+                    print_data(l)
     except KeyboardInterrupt:
         print("Program stopped by user")
 
